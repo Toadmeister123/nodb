@@ -99,7 +99,7 @@ class App extends Component {
       <div className="App">
         <Title />
         <input type="text" placeholder="Name of Item" onChange={e => this.handleName(e.target.value)} value={this.state.name} />
-        <input type="text"  placeholder="Amount" onChange={e => this.handleQuantity(e.target.value)} value={this.state.Quantity} />
+        <input type="text" placeholder="Amount" onChange={e => this.handleQuantity(e.target.value)} value={this.state.Quantity} />
         <button onClick={() => this.createItem(name, Quantity)}>List Item</button>
         {mappedItems}
         <Logo />
