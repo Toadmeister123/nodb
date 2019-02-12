@@ -81,8 +81,7 @@ class App extends Component {
 
   
   render() {
-    // console.log(this.state)
-    // const items = this.state.items
+
     const {name, Quantity} = this.state
     const mappedItems = this.state.items.map(item => {
       return (
@@ -97,12 +96,12 @@ class App extends Component {
     })
     return (
       <div className="App">
+        <Logo />
         <Title />
         <input type="text" placeholder="Name of Item" onChange={e => this.handleName(e.target.value)} value={this.state.name} />
         <input type="text" placeholder="Amount" onChange={e => this.handleQuantity(e.target.value)} value={this.state.Quantity} />
         <button onClick={() => this.createItem(name, Quantity)}>List Item</button>
         {mappedItems}
-        <Logo />
         <Footer />
       </div>
     );

@@ -3,7 +3,7 @@ const ctrl = require('./controller')
 
 const app = express()
 
-// let result = express.json()
+
 app.use(express.json())
 
 app.get('/api/items', ctrl.getItems)
